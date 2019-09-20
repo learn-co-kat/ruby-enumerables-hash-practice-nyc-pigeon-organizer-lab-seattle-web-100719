@@ -18,9 +18,9 @@ def nyc_pigeon_organizer(data)
     y_sorted = []
     z_sorted = []
 
-    x.each { |key,value| x_sorted << key if value.include?"#{pigeon}" }
-    y.each { |key,value| y_sorted << key if value.include?"#{pigeon}" }
-    z.each { |key,value| z_sorted << key if value.include?"#{pigeon}" }
+    x.each { |key,value| x_sorted << key.to_s if value.include?"#{pigeon}" }
+    y.each { |key,value| y_sorted << key.to_s if value.include?"#{pigeon}" }
+    z.each { |key,value| z_sorted << key.to_s if value.include?"#{pigeon}" }
 
     sorted_pigeons[pigeon] = {
       color: x_sorted,
